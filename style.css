@@ -13,7 +13,7 @@ COLORS
     --grey: #333;
     --white: #fff;
 
-    /* 다크모드 전환용 변수*/
+    /* 다크 모드 전환용 변수 */
     --bg : #fff;
     --text : #333;
 }
@@ -72,19 +72,19 @@ body {
     transition: background .3s, color .3s;
 }
 
-/* 다크모드 : body에 dark클래스가 붙으면 변수 값이 바뀜 */
+/* 다크모드 : body에 dark 클래스가 붙으면 변수 값이 바뀜. */
 body.dark {
-    --bg: #17181c;
-    --text: #e8e8ea;
+    --bg : #17181c;
+    --text : #e8e8ea;
 }
 
-/*
+/* 
 DARK MODE BUTTON
 ================================================ */
 .btn-theme {
     position: fixed;
     right: 1rem;
-    button: 1rem;
+    bottom: 1rem;
     z-index: 3;
     width: 3rem;
     height: 3rem;
@@ -98,6 +98,7 @@ DARK MODE BUTTON
 body.dark .btn-theme {
     background: var(--yellow);
 }
+
 
 /*
 HEADER
@@ -166,13 +167,13 @@ MAIN
 ================================================ */
 #main {
     background-color: #4db1ec;
-    background-image: url('../스터디모집/images/hero01.png');
+    background-image: url('../images/hero01.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode:screen;
+    background-blend-mode: screen;
     height: 100vh;
-    color: var(--grey); /* 다크모드에서도 글자 어둡게 유지 */
+    color: var(--grey);  /* 다크 모드에서도 글자 어둡게 유지 */
 
     animation: bg-color 24s infinite;  /* @keyframes bg-color 설정해야 나옴. */
 
@@ -240,14 +241,14 @@ MAIN
     display: block;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1rem;
-    letter-spacing: .1rem;
-    font-variant-numeric: tabilar-nums;
+    letter-spacing: .1em;
+    font-variant-numeric: tabular-nums;  /* 숫자 폭을 같게 해서 흔들림 방지 */
 }
 
 .clock-date {
-    display: block;
+    display: block;      /* 시각 위에 한 줄을 차지하도록 */
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: .25rem;
 }
 
@@ -303,7 +304,6 @@ CURRICULUM
 
 .content {
     padding-bottom: 1rem;
-    /* padding: 0 0 1rem 0; 위 오 아 왼 */
 }
 
 
@@ -372,7 +372,7 @@ APPLY
     width: 100%;
     margin-bottom: 1.5rem;
     font-family: inherit;
-    color: var(--grey); /* 다크모드에서도 입력글자 어둡게 */
+    color: var(--grey);   /* 다크 모드에서도 입력 글자는 어둡게 */
 }
 
 .apply-textarea {
