@@ -8,7 +8,7 @@
    
         <!-- css영역 -->
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     </head>
@@ -23,7 +23,8 @@
                     <button class="btn-menu">Menu</button>
                     <ul class="main-nav">
                         <li><a href="#about">About</a></li>
-                        <li><a href="#curriculum">curriculum</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#mentors">Mentors</a></li>
                         <li><a href="#apply">Apply</a></li>
                     </ul>
@@ -35,7 +36,7 @@
 
         <!-- Main 영역-->
         <section id="main">
-            <div>
+            <div class="wrapper">
                 <h1>Full-Stack Dev Study</h1>
                 <p class="main-date">
                     2026. 09. 01 - 2026. 10. 27<br>
@@ -73,41 +74,71 @@
         <section id="curriculum">
             <h2>Curriculum</h2>
             <div class="wrapper">
-                <table class="curriculum-table">
-                    <tr>
-                        <td class="week">1주</td>
-                        <td class="content">HTML/ CSS 기초 다지기</td>
-                    </tr>
-                    <tr>
-                        <td class="week">2주</td>
-                        <td class="content">JavaScript 핵심 문법 정리</td>
-                    </tr>
-                    <tr>
-                        <td class="week">3주</td>
-                        <td class="content">React로 프론트엔드 화면 만들기</td>
-                    </tr>
-                    <tr>
-                        <td class="week">4주</td>
-                        <td class="content">Node.js와 Express로 서버 만들기</td>
-                    </tr>
-                    <tr>
-                        <td class="week">5주</td>
-                        <td class="content">MongoDB로 데이터베이스 다루기</td>
-                    </tr>
-                    <tr>
-                        <td class="week">6주</td>
-                        <td class="content">프론트엔드 - 백엔드 API 연동하기</td>
-                    </tr>
-                    <tr>
-                        <td class="week">7주</td>
-                        <td class="content">배포하기 (Vercel / Render)</td>
-                    </tr>
-                    <tr>
-                        <td class="week">8주</td>
-                        <td class="content">최종 프로젝트 발표회 (데모데이)</td>
-                    </tr>
-                </table>
+                <div class="tab-menu">
+                    <button class="tab-btn active" data-tab="tab-front">Frontend</button>
+                    <button class="tab-btn" data-tab="tab-back">Backend</button>
+                    <button class="tab-btn" data-tab="tab-launch">Launch</button>
+                </div>
+
+                <div class="tab-panel active" id="tab-front">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">1주</td>
+                            <td class="content">HTML/ CSS 기초 다지기</td>
+                        </tr>
+                        <tr>
+                            <td class="week">2주</td>
+                            <td class="content">JavaScript 핵심 문법 정리</td>
+                        </tr>
+                        <tr>
+                            <td class="week">3주</td>
+                            <td class="content">React로 프론트엔드 화면 만들기</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-panel" id="tab-back">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">4주</td>
+                            <td class="content">Node.js와 Express로 서버 만들기</td>
+                        </tr>
+                        <tr>
+                            <td class="week">5주</td>
+                            <td class="content">MongoDB로 데이터베이스 다루기</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-panel" id="tab-launch">
+                    <table class="curriculum-table">
+                        <tr>
+                            <td class="week">6주</td>
+                            <td class="content">프론트엔드 - 백엔드 API 연동하기</td>
+                        </tr>
+                        <tr>
+                            <td class="week">7주</td>
+                            <td class="content">배포하기 (Vercel / Render)</td>
+                        </tr>
+                        <tr>
+                            <td class="week">8주</td>
+                            <td class="content">최종 프로젝트 발표회 (데모데이)</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+        </section>
+
+        <!-- Main 영역-->
+        <section id="gallery" class="wrapper">
+            <h2>Gallery</h2>
+            <img class="gallery-main" src="images/gallery1.jpg" alt="스터디 사진1">
+            <ul class="gallery-thumbs">
+                <li><img class="active" src="images/gallery1.jpg" alt="스터디 사진1"></li>
+                <li><img src="images/gallery2.jpg" alt="스터디 사진2"></li>
+                <li><img src="images/gallery3.jpg" alt="스터디 사진3"></li>
+                <li><img src="images/gallery4.jpg" alt="스터디 사진4"></li>
+            </ul>
         </section>
 
         <!-- Mentors영역 -->
